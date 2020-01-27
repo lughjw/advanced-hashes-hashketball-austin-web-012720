@@ -1,3 +1,5 @@
+require 'pry'
+
 # Write your code here!
 def game_hash
   game_data = {
@@ -162,6 +164,7 @@ end
 
 def get_player_by_name(player_name)
   result = []
+  binding.pry
   game_hash.each_pair do |k1,v1|
     result = v1[:players].select{|player| player[:player_name] == player_name}
     
